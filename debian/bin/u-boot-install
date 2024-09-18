@@ -141,6 +141,11 @@ if [[ -z "${TARGET}" ]]; then
 
 		"sun5i-a13")
 			TARGET="a13-olinuxino"
+			case ${board} in
+				"a13-som"*)
+					TARGET="a13-som"
+				;;
+			esac
 			INSTALL_FUNC=install_sunxi
 			;;
 
