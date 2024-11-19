@@ -505,7 +505,7 @@ uint8_t olinuxino_phy_txdelay()
 	case OLINUXINO_LIME2:
 		if (eeprom->revision.major > 'G')
 			/* KSZ9031 */
-			return 4;
+			return 1;
 		else if (eeprom->revision.major > 'E')
 			/* RTL8211E */
 			return 2;
@@ -523,7 +523,7 @@ uint8_t olinuxino_phy_rxdelay()
 {
 	switch (olinuxino_get_board_family()) {
 	case OLINUXINO_LIME2:
-			return 0;
+			return 1;
 	case OLINUXINO_SOM:
 			return 6;
 	case OLINUXINO_SOM204:
